@@ -1,2 +1,3 @@
-# WebBasicJungsuk
-웹 표준의 정석
+# 웹 표준의 정석
+## Start ~ End
+> 2022.08.13 ~
