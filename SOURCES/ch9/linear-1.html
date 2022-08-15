@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>선형 그러데이션</title>
+	<style>
+	div {
+		width:500px;
+		height:300px;
+		border-radius:10px;
+		margin-bottom: 10px;
+	}
+	#grad {
+		/* 왼쪽 위에서 오른쪽 아래 방향으로, 파랑에서 흰색으로 */
+    	background: linear-gradient(to right bottom, blue, white); 
+	}
+	#grad2{
+		background: linear-gradient(45deg, pink, yellow 60%, purple);
+	}
+</style>
+</head>
+<body>
+	<div id="grad"></div>
+	<div id="grad2"></div>
+</body>
+</html>
