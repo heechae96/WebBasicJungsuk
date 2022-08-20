@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming</title>
+	<link rel="stylesheet" href="css/nodelist.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <!-- 입력 받은 값이 안나타남 -->
+      <!-- return false : 기존에 있던 기능을 삭제 시키는 행위 -->
+      <button onclick="newRegister(); return false;">추가</button>
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+
+  <script>
+    function newRegister(){
+      // 추가
+      var newItem = document.createElement("li");
+      var subject = document.querySelector("#subject");
+      var newText = document.createTextNode(subject.value);
+
+      newItem.appendChild(newText);
+      document.querySelector("#itemList").appendChild(newItem);
+
+      subject.value = null; // 입력받은 값이 입력창에 그대로 남은것을 방지
+
+      // 삭제
+      var items = document.querySelectorAll("li");
+      for(let i = 0; i < items.length; i++){
+        items[i].addEventListener("click", function(){
+          if(this.parentNode){  // 부모 노드가 있는 경우만!
+            // 반드시 부모노드를 거쳐서 삭제해야한다!
+            this.parentNode.removeChild(this);
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>
