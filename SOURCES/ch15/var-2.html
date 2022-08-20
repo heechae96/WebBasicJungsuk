@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>var 예약어를 사용한 지역 변수와 전역 변수</title>
+</head>
+<body>
+	<script>		
+		function addNumber() { 								
+			var sum = 10 + 20;			// 지역 변수
+      document.write(sum + "<br>");
+		}
+    addNumber();
+    
+    // var은 재선언 가능하다 -> 협업시 문제 발생 가능성..
+    var sum = 100;
+    document.write(sum);
+  </script>
+</body>
+</html>
