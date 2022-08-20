@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Variable</title>
+</head>
+<body>
+  <script>		 
+    var x = 10;
+
+		function displayNumber() { 								
+      console.log("x is " + x);
+      // var와 다르게 변수 y가 초기화 되어있지 않다는 에러 발생!
+      //  -> 선언이 안되어 있다는 에러가 발생해야 하는데?
+      //    -> 자바스크립트는 호이스팅 개념이 도입되어서 그렇다. 
+      //      -> 코드를 실행하기전 변수 선언 및 함수 선언이 스코프의 최상단으로 끌어올려지는 현상
+      console.log("y is " + y);      
+      let y = 20;
+		}
+    displayNumber();
+  </script>
+</body>
+</html>

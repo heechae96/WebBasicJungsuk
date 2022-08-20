@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Variable</title>
+</head>
+<body>
+  <script>
+    // 전역변수를 사용하고 싶은 경우. let를 뺴면 된다
+    // var와 다르게 재선언이 불가
+    // -> 재할당은 가능함
+    function calcSum(n) {
+      let sum = 0;
+      for(let i = 1; i < n + 1; i++) {						
+        sum += i;	
+      }      
+      console.log(sum);
+    }    
+    calcSum(10);    
+  </script>
+</body>
+</html>
